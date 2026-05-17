@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Lefèvre | Plomberie, Chauffage & Rénovation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for professional modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Smooth transitions for interactive elements */
+        .hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-xl bg-brand-600 flex items-center justify-center text-white text-xl font-bold shadow-md shadow-brand-500/20">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight text-slate-900 block leading-none">ARTISAN LEFÈVRE</span>
+                        <span class="text-xs font-semibold text-brand-600 tracking-wider uppercase">Plomberie & Chauffage</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-brand-600 font-semibold text-sm transition">Accueil</a>
+                    <a href="galerie.html" class="text-slate-600 hover:text-brand-600 font-medium text-sm transition">Nos Réalisations</a>
+                    <a href="devis.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-brand-600 text-white hover:bg-brand-700 font-semibold text-sm transition shadow-sm shadow-brand-600/15 hover-lift">
+                        <i class="fa-regular fa-file-lines mr-2"></i> Demander un Devis
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition" aria-label="Ouvrir le menu">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white px-4 pt-2 pb-6 space-y-3 shadow-lg absolute w-full left-0 transition-all duration-300">
+            <a href="index.html" class="block px-4 py-3 rounded-xl bg-brand-50 text-brand-700 font-semibold text-base">Accueil</a>
+            <a href="galerie.html" class="block px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-medium text-base transition">Nos Réalisations</a>
+            <div class="pt-2">
+                <a href="devis.html" class="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl bg-brand-600 text-white font-semibold text-base transition shadow-md">
+                    <i class="fa-regular fa-file-lines mr-2"></i> Demander un Devis
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative bg-gradient-to-br from-slate-900 via-brand-900 to-slate-950 text-white py-20 lg:py-32 overflow-hidden">
+            <!-- Background Decorative Grid & Light effects -->
+            <div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-500/20 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-brand-500/10 border border-brand-500/20 px-3 py-1.5 rounded-full text-brand-400 text-sm font-semibold tracking-wide uppercase">
+                        <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span>Disponible & Réactif à Rouen et alentours</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none">
+                        Plomberie & Chauffage de confiance
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Un service technique irréprochable pour vos dépannages, entretiens et rénovations complètes de salle de bain. Vous choisissez votre matériel, nous apportons l'expertise !
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2">
+                        <a href="devis.html" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-base transition shadow-lg shadow-brand-500/20 hover-lift">
+                            <i class="fa-regular fa-calendar-check mr-2"></i> Estimer mon projet en ligne
+                        </a>
+                        <a href="tel:0600000000" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 text-white font-bold text-base transition hover-lift">
+                            <i class="fa-solid fa-phone mr-2 text-brand-400"></i> Appeler le 06 00 00 00 00
+                        </a>
+                    </div>
+
+                    <!-- Micro assurances badges -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 max-w-md mx-auto lg:mx-0 border-t border-slate-800">
+                        <div class="flex items-center space-x-2 text-slate-400">
+                            <i class="fa-solid fa-shield-halved text-emerald-500 text-lg"></i>
+                            <span class="text-xs font-semibold uppercase tracking-wider">Garantie Décennale</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-slate-400">
+                            <i class="fa-regular fa-circle-check text-emerald-500 text-lg"></i>
+                            <span class="text-xs font-semibold uppercase tracking-wider">Devis Gratuit</span>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1 flex items-center space-x-2 text-slate-400 justify-center sm:justify-start">
+                            <i class="fa-solid fa-bolt text-amber-500 text-lg animate-bounce"></i>
+                            <span class="text-xs font-semibold uppercase tracking-wider">Dépannage Rapide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Showcase / Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl">
+                        <!-- Simulated modern showcase card with image fallback -->
+                        <div class="aspect-video w-full rounded-xl overflow-hidden bg-slate-800 relative group mb-6">
+                            <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Chantier+Artisan" alt="Savoir-faire plomberie" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=Votre+Savoir+Faire'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent flex items-end p-4">
+                                <span class="text-sm font-bold text-white"><i class="fa-solid fa-location-dot mr-2 text-brand-400"></i>Rénovation de salle de bain à Rouen</span>
+                            </div>
+                        </div>
+
+                        <!-- Mini feedback slider in card -->
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-1 text-amber-500 text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="text-slate-400 text-xs ml-2 font-medium">5.0 d'après nos clients</span>
+                            </div>
+                            <p class="text-xs text-slate-300 italic font-medium leading-relaxed">
+                                "Travail remarquable et très propre pour le changement de ma chaudière. Ponctuel et réactif."
+                            </p>
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase tracking-widest">— Jean-Pierre D. (Rouen)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                    <span class="text-brand-600 font-extrabold text-sm uppercase tracking-widest block">Nos Services</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Nos domaines d'expertise technique</h2>
+                    <p class="text-slate-600 text-lg">
+                        De la fuite d'eau urgente à la création complète de votre pièce d'eau, nous intervenons avec professionnalisme et transparence tarifaire.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl hover-lift shadow-sm hover:shadow-md transition duration-300">
+                        <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-faucet-drip"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Plomberie Générale</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Dépannage urgent, recherche de fuite, installation de robinetterie, modification de tuyauterie cuivre/multicouche et raccordements.
+                        </p>
+                        <ul class="text-xs space-y-2 text-slate-500 font-medium">
+                            <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>Détection de fuites</li>
+                            <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>Remplacement de chauffe-eau</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl hover-lift shadow-sm hover:shadow-md transition duration-300">
+                        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Chauffage & Radiateurs</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Pose et entretien de vos systèmes de chauffage. Remplacement de radiateurs, désembouage de circuits et régulation de température.
+                        </p>
+                        <ul class="text-xs space-y-2 text-slate-500 font-medium">
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Désembouage hydrodynamique</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Raccordement chaudière/PAC</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl hover-lift shadow-sm hover:shadow-md transition duration-300">
+                        <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-shower"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Rénovation de Salle de Bain</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Création de douche à l'italienne, pose de baignoire, installation de meubles vasques et sanitaires suspendus. Clé en main de A à Z.
+                        </p>
+                        <ul class="text-xs space-y-2 text-slate-500 font-medium">
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i>Douche à l'italienne sur-mesure</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i>Optimisation petits espaces</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-slate-900 text-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Text side -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-brand-400 font-extrabold text-sm uppercase tracking-widest block">Notre Savoir-Faire</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">La preuve en images avec nos Avant / Après</h2>
+                        <p class="text-slate-300 text-base leading-relaxed">
+                            Glissez le curseur au milieu de l'image pour voir la transformation complète d'une salle de bain vétuste en un espace moderne et optimisé réalisé par nos soins.
+                        </p>
+                        <div class="pt-4">
+                            <a href="galerie.html" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold transition">
+                                Voir d'autres réalisations <i class="fa-solid fa-arrow-right ml-2 text-brand-400"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Slider side -->
+                    <div class="lg:col-span-7 flex justify-center">
+                        <div class="relative w-full max-w-xl aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl select-none" id="slider-container">
+                            <!-- Before Image (Underneath) -->
+                            <img src="https://placehold.co/800x600/334155/ffffff?text=AVANT+-+Salle+de+bain+ancienne" alt="Avant travaux" class="absolute inset-0 w-full h-full object-cover">
+                            
+                            <!-- After Image (On Top, Resizable) -->
+                            <div class="absolute inset-0 w-full h-full overflow-hidden" id="after-wrapper">
+                                <img src="https://placehold.co/800x600/0284c7/ffffff?text=APRÈS+-+Douche+italienne+moderne" alt="Après travaux" class="absolute inset-0 w-full h-full object-cover max-w-none" id="after-img">
+                            </div>
+
+                            <!-- Bar / Handle -->
+                            <div class="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize flex items-center justify-center" id="slider-handle">
+                                <div class="w-10 h-10 bg-brand-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white text-white text-xs">
+                                    <i class="fa-solid fa-arrows-left-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                    <span class="text-brand-600 font-extrabold text-sm uppercase tracking-widest block">Témoignages</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Ce que nos clients disent de nous</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 p-8 rounded-2xl relative border border-slate-100">
+                        <div class="absolute -top-4 left-8 w-10 h-10 bg-brand-600 text-white rounded-full flex items-center justify-center text-xl shadow-md">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="text-slate-600 italic leading-relaxed mb-6 pt-2">
+                            "Excellent professionnel ! Nous avons fait appel à lui pour rénover intégralement notre salle d'eau. Il a été de très bon conseil quant au choix des matériaux techniques et le résultat est impeccable."
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-brand-200 text-brand-800 rounded-full font-bold flex items-center justify-center text-sm">
+                                MP
+                            </div>
+                            <div>
+                                <span class="block font-bold text-slate-900 text-sm">Marie & Pierre L.</span>
+                                <span class="block text-slate-400 text-xs">Propriétaires à Bois-Guillaume</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 rounded-2xl relative border border-slate-100">
+                        <div class="absolute -top-4 left-8 w-10 h-10 bg-brand-600 text-white rounded-full flex items-center justify-center text-xl shadow-md">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="text-slate-600 italic leading-relaxed mb-6 pt-2">
+                            "Dépannage ultra-rapide un dimanche matin pour une grosse fuite d'eau sur mon collecteur principal. Le tarif annoncé a été respecté et l'intervention a été très propre. Je recommande chaudement !"
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-brand-200 text-brand-800 rounded-full font-bold flex items-center justify-center text-sm">
+                                FC
+                            </div>
+                            <div>
+                                <span class="block font-bold text-slate-900 text-sm">François C.</span>
+                                <span class="block text-slate-400 text-xs">Particulier à Rouen Centre</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-brand-900 text-white py-16 relative">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/20 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Un projet ou un dépannage en vue ?</h2>
+                <p class="text-lg text-slate-200 max-w-xl mx-auto font-light">
+                    Obtenez une première estimation ou demandez un rendez-vous technique en quelques clics via notre formulaire intelligent.
+                </p>
+                <div class="flex justify-center gap-4 pt-2">
+                    <a href="devis.html" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-accent-500 hover:bg-accent-600 text-slate-950 font-extrabold text-base transition shadow-lg shadow-accent-500/20 hover-lift">
+                        <i class="fa-regular fa-file-lines mr-2"></i> Obtenir mon devis gratuit
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-950 text-slate-400 pt-16 pb-8 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <!-- Col 1: About -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white text-sm font-bold shadow">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <span class="text-lg font-bold text-white tracking-tight">ARTISAN LEFÈVRE</span>
+                </div>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                    Votre artisan expert de confiance à Rouen et sa périphérie. Entreprise assurée en garantie décennale et responsabilité civile professionnelle.
+                </p>
+            </div>
+
+            <!-- Col 2: Navigation links -->
+            <div class="space-y-4">
+                <h4 class="text-white font-bold text-sm tracking-widest uppercase">Navigation</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="index.html" class="hover:text-white transition">Accueil</a></li>
+                    <li><a href="galerie.html" class="hover:text-white transition">Nos Réalisations</a></li>
+                    <li><a href="devis.html" class="hover:text-white transition">Demander un Devis</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Hours -->
+            <div class="space-y-4">
+                <h4 class="text-white font-bold text-sm tracking-widest uppercase">Horaires</h4>
+                <ul class="space-y-2 text-xs text-slate-500">
+                    <li>Lundi — Vendredi : 8h00 - 18h30</li>
+                    <li>Samedi (Urgence uniquement) : 9h00 - 13h00</li>
+                    <li>Dimanche : Fermé</li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact details -->
+            <div class="space-y-4">
+                <h4 class="text-white font-bold text-sm tracking-widest uppercase">Me Contacter</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="tel:0600000000" class="hover:text-white transition"><i class="fa-solid fa-phone mr-2 text-brand-500"></i>06 00 00 00 00</a></li>
+                    <li><a href="mailto:contact@artisanlefevre.fr" class="hover:text-white transition"><i class="fa-solid fa-envelope mr-2 text-brand-500"></i>contact@artisanlefevre.fr</a></li>
+                    <li class="text-slate-500"><i class="fa-solid fa-location-dot mr-2 text-brand-500"></i>Rouen, Normandie, France</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-600">
+            <p>&copy; 2026 Artisan Lefèvre. Tous droits réservés.</p>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-slate-400 transition">Mentions Légales</a>
+                <a href="#" class="hover:text-slate-400 transition">Données Personnelles</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- MOBILE MENU FUNCTIONALITY ---
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                icon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        });
+
+        // --- INTERACTIVE BEFORE/AFTER SLIDER ---
+        const container = document.getElementById('slider-container');
+        const afterWrapper = document.getElementById('after-wrapper');
+        const handle = document.getElementById('slider-handle');
+        const afterImg = document.getElementById('after-img');
+
+        // Set initial positions
+        const initialPercent = 50;
+        afterWrapper.style.width = `${initialPercent}%`;
+        handle.style.left = `${initialPercent}%`;
+
+        function setSliderPosition(x) {
+            const rect = container.getBoundingClientRect();
+            // Calculate absolute X position as percentage of container width
+            let position = ((x - rect.left) / rect.width) * 100;
+            
+            // Constrain between 0% and 100%
+            if (position < 0) position = 0;
+            if (position > 100) position = 100;
+
+            afterWrapper.style.width = `${position}%`;
+            handle.style.left = `${position}%`;
+        }
+
+        // Mouse events
+        let isDragging = false;
+        container.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            setSliderPosition(e.clientX);
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            setSliderPosition(e.clientX);
+        });
+
+        // Touch events for responsive mobile friendliness
+        container.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            setSliderPosition(e.touches[0].clientX);
+        });
+
+        window.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        window.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            setSliderPosition(e.touches[0].clientX);
+        });
+
+        // Update image size tracking on window resize to avoid visual distortions
+        window.addEventListener('resize', () => {
+            afterImg.style.width = `${container.offsetWidth}px`;
+            afterImg.style.height = `${container.offsetHeight}px`;
+        });
+        
+        // Run once at start to bind sizes properly
+        afterImg.style.width = `${container.offsetWidth}px`;
+        afterImg.style.height = `${container.offsetHeight}px`;
+    </script>
+</body>
+</html>
